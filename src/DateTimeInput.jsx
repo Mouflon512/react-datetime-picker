@@ -551,7 +551,7 @@ export default class DateTimeInput extends PureComponent {
     if (formElementsWithoutSelect.every((formElement) => !formElement.value)) {
       onChange(null, false);
     } else if (
-      formElements.every((formElement) => formElement.value && formElement.validity.valid)
+      formElements.every((formElement) => formElement.value)
     ) {
       const year = parseInt(values.year, 10) || new Date().getFullYear();
       const monthIndex = parseInt(values.month || 1, 10) - 1;
